@@ -1,43 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <script>
-        // Toggle dark mode dan simpan preferensi
-        function toggleDark() {
-            document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-        }
-
-        // Aktifkan dark mode jika sebelumnya dipilih
-        if (localStorage.theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
+    <!-- ✅ CSS Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+<body class="bg-light">
+    @yield('content')
 
-    {{-- Header --}}
-    @hasSection('header')
-        <header class="bg-white dark:bg-gray-800 shadow p-4 flex justify-between items-center">
-            <div>
-                @yield('header')
-            </div>
-            <button onclick="toggleDark()" class="text-sm bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded hover:opacity-80">
-                Toggle Dark Mode
-            </button>
-        </header>
-    @endif
-
-    {{-- Main Content --}}
-    <main class="p-6">
-        @yield('content')
-    </main>
-
+    <!-- ✅ JS Bootstrap CDN -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
