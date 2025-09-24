@@ -21,7 +21,7 @@ use App\Http\Controllers\CheckoutController;
 //     return view('welcome');
 // });
 Route::get('/', [UserController::class, 'index'])->name('home');
-Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
+Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
 Route::get('/produk/{id}', [ProdukController::class, 'show'])->name('produk.show');
 Route::get('/belanja', [BelanjaController::class, 'index'])->name('belanja');
 Route::get('/keranjang', [KeranjangController::class, 'index'])->name('keranjang');

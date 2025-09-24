@@ -10,6 +10,32 @@
     </header>
 
     <main class="p-6">
+
+        <!-- 🔍 Form Filter Produk -->
+        <form method="GET" action="{{ route('produk.index') }}" class="mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <input type="text" name="nama" placeholder="Cari nama produk..." class="border p-2 rounded w-full">
+
+                <select name="kategori" class="border p-2 rounded w-full">
+                    <option value="">Semua Kategori</option>
+                    <option value="makanan">Makanan</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="kerajinan">Kerajinan</option>
+                </select>
+
+                <select name="stok" class="border p-2 rounded w-full">
+                    <option value="">Semua Stok</option>
+                    <option value="tersedia">Tersedia</option>
+                    <option value="habis">Habis</option>
+                </select>
+            </div>
+
+            <button type="submit" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded">
+                🔍 Filter Produk
+            </button>
+        </form>
+
+        <!-- 📊 Grid Dashboard -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- Card: Info Pengguna -->
