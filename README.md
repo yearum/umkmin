@@ -13,17 +13,17 @@
 
 ![Dashboard UMKMIN](public/image/dashboard.png)
 
-## 📸 Tampilan Daftar Belanja
+## 📸 Tampilan Daftar Produk
 
-![Daftar Produk UMKMIN](public/image/Screenshot (566).png)
+![Daftar Produk UMKMIN](<public/image/Daftar Produk.png>)
 
 ## 📸 Tampilan Keranjang Belanja
 
-![Keranjang Belanja UMKMIN](public/image/Screenshot (575).png)
+![Keranjang Belanja UMKMIN](<public/image/Keranjang Belanja.png>)
 
 ## 📸 Tampilan Checout
 
-![Checkout UMKMIN](public/image/Screenshot (576).png)
+![Checkout UMKMIN](public/image/Checout.png)
 
 
 
