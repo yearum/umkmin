@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="container max-w-md">
-    <h1 class="text-2xl font-bold mb-4 text-black dark:text-white">Edit Produk</h1>
+    <h1 class="text-2xl font-bold mb-4 text-black">Edit Produk</h1>
 
     {{-- Tampilkan error validasi --}}
     @if($errors->any())
-        <div class="bg-red-100 text-red-700 p-4 rounded mb-4 dark:bg-red-200">
+        <div class="bg-red-100 text-red-700 p-4 rounded mb-4">
             <ul class="list-disc list-inside">
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -20,38 +20,38 @@
         @method('PUT')
 
         <div>
-            <label class="block font-semibold text-black dark:text-white">Nama Produk</label>
+            <label class="block font-semibold text-black">Nama Produk</label>
             <input type="text" name="name"
                 value="{{ old('name', $product->name) }}"
-                class="w-full px-4 py-2 border rounded text-black dark:text-white dark:bg-gray-800 @error('name') border-red-500 @enderror">
+                class="w-full px-4 py-2 border rounded text-black @error('name') border-red-500 @enderror">
         </div>
 
         <div>
-            <label class="block font-semibold text-black dark:text-white">Kategori</label>
+            <label class="block font-semibold text-black">Kategori</label>
             <input type="text" name="category"
                 value="{{ old('category', $product->category) }}"
-                class="w-full px-4 py-2 border rounded text-black dark:text-white dark:bg-gray-800 @error('category') border-red-500 @enderror">
+                class="w-full px-4 py-2 border rounded text-black @error('category') border-red-500 @enderror">
         </div>
 
         <div>
-            <label class="block font-semibold text-black dark:text-white">Stok</label>
+            <label class="block font-semibold text-black">Stok</label>
             <input type="number" name="stock"
                 value="{{ old('stock', $product->stock) }}"
-                class="w-full px-4 py-2 border rounded text-black dark:text-white dark:bg-gray-800 @error('stock') border-red-500 @enderror">
+                class="w-full px-4 py-2 border rounded text-black @error('stock') border-red-500 @enderror">
         </div>
 
         <div>
-            <label class="block font-semibold text-black dark:text-white">Harga Beli</label>
+            <label class="block font-semibold text-black">Harga Beli</label>
             <input type="number" name="price_buy"
                 value="{{ old('price_buy', $product->price_buy) }}"
-                class="w-full px-4 py-2 border rounded text-black dark:text-white dark:bg-gray-800 @error('price_buy') border-red-500 @enderror">
+                class="w-full px-4 py-2 border rounded text-black @error('price_buy') border-red-500 @enderror">
         </div>
 
         <div>
-            <label class="block font-semibold text-black dark:text-white">Harga Jual</label>
+            <label class="block font-semibold text-black">Harga Jual</label>
             <input type="number" name="price_sell"
                 value="{{ old('price_sell', $product->price_sell) }}"
-                class="w-full px-4 py-2 border rounded text-black dark:text-white dark:bg-gray-800 @error('price_sell') border-red-500 @enderror">
+                class="w-full px-4 py-2 border rounded text-black @error('price_sell') border-red-500 @enderror">
         </div>
 
         <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded">Update</button>
