@@ -11,7 +11,7 @@
 
 ## 📸 Tampilan Dashboard
 
-![Dashboard UMKMIN](https://github.com/yearum/umkmin/blob/main/public/images/dashboard.png?raw=true)
+![Dashboard UMKMIN](public/image/dashboard.png)
 
 
 ---
